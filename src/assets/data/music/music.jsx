@@ -233,6 +233,18 @@ export const music = [
         </>
     },
     {
+        title: "Saavan - Sofar Sounds",
+        year: 2017,
+        image: null,
+        youtubeID: "N4PZ-TwKjVQ",
+        category: "live",
+        description: <>
+            <p>Staccato performing "Saavan" at Sofar Chennai on June 18th, 2017 <br />
+                Sofar Sounds connects artists and music-lovers around the world through intimate shows in unique venues.
+            </p>
+        </>
+    },
+    {
         title: "Maname KaNamum - A Neo-Carnatic Cover by GrooViDa",
         year: 2017,
         image: null,
@@ -343,6 +355,38 @@ export const music = [
                 Produced by Gayathri Gopal <br /> <br />
 
                 Special Thanks to Deepika Chandrasekaran, Saikumar & Kavita Baliga, R H Vikram <br />
+            </p>
+        </>
+    },
+    {
+        title: "Thakita Thakajham",
+        year: 2016,
+        image: null,
+        category: "session",
+        youtubeID: "p9kCgQdy_VE",
+        description: <>
+            <p>
+                Song Name: Thakita Thakajham <br />
+                Singer: Javed Ali <br />
+                Lyrics: Srimani <br />
+                Banner : Annapurna Studios <br />
+                Producer : Nagarjuna Akkineni <br />
+                Director : Kalyan Krishna <br />
+                Music : Devi Sri Prasad <br />
+            </p>
+        </>
+    },
+    {
+        title: "Human Ethics - Theme Music",
+        year: 2016,
+        image: null,
+        category: "session",
+        youtubeID: "8FuPM1ip7aU",
+        description: <>
+            <p>
+                Human Ethics theme <br />
+                film - Maaveeran Kittu <br />
+                Composed and arranged by D.Imman
             </p>
         </>
     },

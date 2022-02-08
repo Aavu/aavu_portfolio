@@ -52,10 +52,10 @@ export default function Home() {
     return (
         <motion.div
             key="/"
-            initial={{ x: "100vw" }}
-            animate={{ x: 0 }}
-            exit={{ x: "-100vw" }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.0 }}
         >
             <HomeStyle>
                 <motion.div className='container'>

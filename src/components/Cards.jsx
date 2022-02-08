@@ -22,13 +22,12 @@ const CardStyles = styled.div`
         width: 100%;
         height: 100%;
         object-fit: cover;
-        /* border-radius: 0 0 8px 8px; */
     }
 
     .card {
         position: relative;
-        width: 240px;
-        height: 160px;
+        width: 384px;
+        height: 216px;
         box-shadow: 4px 4px 4px 0px var(--gray1);
         border: solid 8px var(--white);
         cursor: pointer;
@@ -44,6 +43,11 @@ const CardStyles = styled.div`
             .title {
                 display: block;
             }
+        }
+
+        @media only screen and (max-width: 864px) {
+            width: 256px;
+            height: 144px;  
         }
 
         .title {
@@ -80,7 +84,7 @@ const CardStyles = styled.div`
 
 export const Cards = ({ items, heading, category, callbackId }) => {
     const getThumbnail = (id) => {
-        return `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
+        return `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
     }
 
     return (

@@ -21,7 +21,7 @@ const MyRoutes = () => {
                 <Route path="/about" element={<About lastLoc={lastLoc} />} />
                 <Route path="/music" element={<Music lastLoc={lastLoc} />} />
                 <Route path="/projects" element={<Projects lastLoc={lastLoc} />} />
-                <Route path="/blog" element={<Blog lastLoc={lastLoc} />} />
+                {/* <Route path="/blog" element={<Blog lastLoc={lastLoc} />} /> */}
             </Routes>
         </>
     );

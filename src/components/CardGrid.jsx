@@ -11,12 +11,14 @@ const CardGridStyle = styled.div`
     align-items: center;
 
     .open-card {
+        position: fixed;
         padding: 1em;
         background-color: white;
         width: 80%;
-        position: absolute;
         top: 8vh;
         z-index: 10;
+        overflow: auto;
+        max-height: 80%;
     }
 
     .dim-layer {

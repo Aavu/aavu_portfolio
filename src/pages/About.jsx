@@ -21,8 +21,14 @@ const AboutMeStyle = styled.div`
 
     .content {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: flex-start;
+        flex-direction: row;
+
+        @media only screen and (max-width: 1000px) {
+            flex-direction: column;
+            align-items: center;
+        }
 
         .text-container {
             margin: 2rem 6rem 5rem 4rem;
@@ -38,11 +44,12 @@ const AboutMeStyle = styled.div`
             align-items: flex-start;
             justify-content: center;
             width: 100%;
-            margin-left: 6rem;
+            margin-left: 4rem;
             margin-top: 4rem;
-            .slide {
-                /* background-color: blue; */
-            }   
+            
+            @media only screen and (max-width: 1000px) {
+                margin-left: 0;
+            }
 
             .arrow {
                 color: var(--gray0);
@@ -50,7 +57,6 @@ const AboutMeStyle = styled.div`
                 font-weight: 1000;
                 margin: 16px;
                 cursor: pointer;
-                flex: 1 100%;
                 user-select: none;
                 transition: 0.2s ease-in-out;
                 &:hover {
@@ -67,6 +73,10 @@ const AboutMeStyle = styled.div`
                 user-select: none;
                 box-shadow: 6px 8px 8px -2px var(--gray1);
                 cursor: pointer;
+
+                @media only screen and (max-width: 1000px) {
+                    width: 60vw;
+                }
             }
 
             .image-container {
@@ -85,7 +95,13 @@ const AboutMeStyle = styled.div`
                     transform: scale(1.02);
                 }
             }
+        }
+        .text-container {
+            margin: 2rem 5rem auto 2rem;
 
+            @media only screen and (max-width: 1000px) {
+                margin: 2rem 5rem auto 5rem;
+            }
         }
     }
 `;
@@ -125,10 +141,14 @@ export default function About() {
     return (
         <motion.div
             key="/about"
-            initial={{ x: "-100vw" }}
-            animate={{ x: 0 }}
-            exit={{ x: "100vw" }}
-            transition={{ duration: 0.5 }}
+            // initial={{ x: "-100vw" }}
+            // animate={{ x: 0 }}
+            // exit={{ x: "100vw" }}
+            // transition={{ duration: 0.5 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.0 }}
         >
             <AboutMeStyle>
                 <h1>About Me</h1>

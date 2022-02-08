@@ -1,5 +1,30 @@
 export const projects = [
     {
+        title: "Design of Hathaani",
+        year: 2021,
+        image: null,
+        category: "research",
+        youtubeID: "n9kNsb_Rg1M",
+        description: <>
+            <p>A novel robotic violinist that is designed to play Carnatic music - a music system popular in the southern part of India. The robot plays the D string and uses a single finger mechanism inspired by the Chitravina - a fretless Indian lute. A fingerboard traversal system with a dynamic finger tip apparatus enables the robot to play gamakas - pitch based embellishments in-between notes, which are at the core of Carnatic music. A double roller design is used for bowing which reduces space, produces a tone that resembles the tone of a conventional violin bow, and facilitates super human playing techniques such as infinite bowing. The design also enables the user to change the bow hair tightness to help capture a variety of performing techniques in different musical styles. Objective assessments and subjective listening tests were conducted to evaluate our design, indicating that the robot can play gamakas in a realistic manner and thus, can perform Carnatic music.</p>
+            <p>Here is the <a href="https://nime.pubpub.org/pub/225tmviw">Published Paper</a>.</p>
+        </>
+    },
+    {
+        title: "Google Arm",
+        year: 2021,
+        image: null,
+        category: "research",
+        youtubeID: "o623TB-mY6A",
+        description: <>
+            <p>
+                Jason Barnes (@cybrnetx), a drummer and composer from Atlanta, lost his lower right arm after an electrical accident in 2012. Determined to continue pursuing music, Jason teamed up with a group of Georgia Tech researchers to create a custom, TensorFlow-powered drumming arm that enables him to drum almost as naturally as if he was playing with his own arm.
+            </p>
+
+            <p>Learn more about how Jason and others are leading the way in accessible technology at <a target="_blank" href="https://goo.gle/forwardrhythm">https://goo.gle/forwardrhythm</a> </p>
+        </>
+    },
+    {
         title: "Skywalker",
         year: 2018,
         image: "/images/projects/skywalker.png",

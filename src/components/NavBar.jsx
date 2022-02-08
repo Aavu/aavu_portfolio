@@ -1,15 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import styled from 'styled-components';
-import { MdClose, MdMenu } from 'react-icons/md'
 import { FaGithub, FaFacebook, FaTwitter, FaInstagram, FaEnvelope, FaLinkedin, FaGlobeAsia, FaDownload } from 'react-icons/fa'
-import cvPdf from '../assets/Aavu_CV.pdf'
+// import cvPdf from '../assets/Aavu_CV.pdf'
 import { saveAs } from "file-saver";
 import { motion } from "framer-motion";
+import { MobileMenu } from "./MobileMenu";
 
 const NavBarStyles = styled.div`
     z-index: 100;
     height: 50px;
+    position: relative;
+    .short-text {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none;
+        @media only screen and (max-width: 800px) {
+            display: block;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .short-text { display: inline-block;}
+        .full-text {display: none;}
+    }
 
     .media {
         display: flex;
@@ -43,6 +59,10 @@ const NavBarStyles = styled.div`
                 transform: scale(1.01);
             }
         }
+
+        @media only screen and (max-width: 800px) {
+            display: none;
+        }
     }
 
     .navbar-holder {
@@ -50,12 +70,17 @@ const NavBarStyles = styled.div`
         justify-content: space-between;
         align-items: center;
         margin: 0 32px;
+        height: 50px;
         
         .navBar {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-grow: 2;
+
+            @media only screen and (max-width: 800px) {
+                display: none;
+            }
         }
 
         .nav-link {
@@ -81,8 +106,15 @@ const NavBarStyles = styled.div`
             &.pad {
                 padding: 12px 2vw;
             }
+
+            @media only screen and (max-width: 800px) {
+                display: inline-block;
+                margin-left: 50vw;
+                transform: translateX(-100%);
+            }
         }
     }
+
     .divider {
         background-color: var(--gray2);
         height:2px;
@@ -93,20 +125,23 @@ const NavBarStyles = styled.div`
 const pages = [
     {
         title: "About",
+        shortTitle: "About",
         route: "about"
     },
     {
         title: "Music",
+        shortTitle: "Music",
         route: "music"
     },
     {
         title: "Projects | Research",
+        shortTitle: "Research",
         route: "projects"
     },
-    {
-        title: "Blog",
-        route: "blog"
-    }
+    // {
+    //     title: "Blog",
+    //     route: "blog"
+    // }
 ];
 
 export default function NavBar({ lastLoc }) {
@@ -119,14 +154,17 @@ export default function NavBar({ lastLoc }) {
         return null;
     }
 
-    const savePdf = (e) => {
-        saveAs(
-            cvPdf, "Raghavasimhan_Sankaranarayanan_CV.pdf"
-        );
-    }
+    // const savePdf = (e) => {
+    //     saveAs(
+    //         cvPdf, "Raghavasimhan_Sankaranarayanan_CV.pdf"
+    //     );
+    // }
 
     return (
         <NavBarStyles>
+            <motion.div className="mobile-menu">
+                <MobileMenu pages={pages} addNoHoverFn={addNoHover} setPageCallback={setPage} />
+            </motion.div>
             <motion.div
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
@@ -138,7 +176,10 @@ export default function NavBar({ lastLoc }) {
                         animate={{ x: (page === '/') ? -400 : 0 }}
                         transition={{ delay: 0.1, duration: 0.5 }}
                     >
-                        <NavLink to="/" className="nav-link name" onClick={() => setPage('/')}>Raghavasimhan Sankaranarayanan</NavLink>
+                        <NavLink to="/" className="nav-link name" onClick={() => setPage('/')}>
+                            <span className="full-text">Raghavasimhan Sankaranarayanan</span>
+                            <span className="short-text">Aavu</span>
+                        </NavLink>
                     </motion.div>
                     <div className="navBar">
                         {pages.map((p, idx) => (
@@ -147,7 +188,10 @@ export default function NavBar({ lastLoc }) {
                     </div >
 
                     <div className="media">
-                        <button onClick={savePdf}><FaDownload /> Download CV</button>
+                        <a target="_blank" href="/Aavu_CV.pdf"><button>
+                            <span className="full-text"><FaDownload /> Download CV</span>
+                            <span className="short-text"><FaDownload /> CV</span>
+                        </button></a>
                         <FaLinkedin className="media-items" />
                         <FaEnvelope className="media-items" />
                         <FaGlobeAsia className="media-items" />

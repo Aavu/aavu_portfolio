@@ -3,37 +3,90 @@ export const projects = [
         title: "Skywalker",
         year: 2018,
         image: "/images/projects/skywalker.png",
-        description:
-            <>
-                <p>This is my graduate research assistant project for the Fall 2018. I am working under Prof.Gil Weinberg at the Georgia Tech Center for Music Technology.</p>
-                <p>I am currently working on the extension of a previous work.</p>
-                <p>This demonstration uses support vector machines to classify finger movements.</p>
-                <p>I am working on a Convolutional Neural Network based regression model to respond to finger by finger movements. The goal is to minimize latency and maximize correlation.</p>
-            </>
+        category: "research",
+        youtubeID: "R_7UnBbh6EI",
+        description: <>
+            <p>This is my graduate research assistant project for the Fall 2018. I am working under Prof.Gil Weinberg at the Georgia Tech Center for Music Technology.</p>
+            <p>I am currently working on the extension of a previous work.</p>
+            <p>This demonstration uses support vector machines to classify finger movements.</p>
+            <p>I am working on a Convolutional Neural Network based regression model to respond to finger by finger movements. The goal is to minimize latency and maximize correlation.</p>
+        </>
+    },
+    {
+        title: "MIDI Player",
+        year: 2020,
+        image: null,
+        category: "project",
+        youtubeID: "iFSt7ScsCPo",
+        description: <><p>A Simple Midi player demonstration - Made for Audio Software Engineering Class Project</p></>
+    },
+    {
+        title: "Cydio - Interactive music through biking!",
+        year: 2019,
+        image: null,
+        category: "project",
+        youtubeID: "MIjduD4keOA",
+        description: <><p>Cydio is a bicycle based system that enables cyclists of alllevels to make music just by riding, the way they alwaysdo. Usually, cyclists listen to music that has already beengenerated and recorded and we wanted to change that. Wewanted the user to make the music based on the way theyride, allowing every cyclist to make their own unique music.The system we created includes several external sensors andthe phone’s sensors to map the different actions that are donewhile on a ride to all kinds of beautiful sounds. The systemtakes the speed, handlebar tilt, the lean angle on the bikewhen cornering, the terrain and the position on the saddleand assigns different effects and audio files to them. It is alsoextremely portable as the sensors talk to a simple iOS appfrom where the sounds are generated and manipulated from.The user can easily listen to it on their earphones, iPhonespeaker or an external speaker. The user will have to mounttheir iPhone onto their bike’s handlebar and open the appto start. We know that listening to music while riding isdangerous, so we created a function that feeds in externalsounds at all times and if a loud sound such as honking or asiren is heard, the music automatically turns off.</p></>
     },
     {
         title: "Chutti - The Robot Arm",
         year: 2018,
         image: "/images/projects/chutti.jpeg",
-        description: <><p>Description goes here</p></>
+        category: "project",
+        youtubeID: "fzmLcXv06QY",
+        description: <><p>The robot is made using the Lego EV3. It runs Linux and is programmed using python 3.</p>
+
+            <p>The iPad interface is designed and programmed using the TouchOSC. It communicates to NodeMCU wirelessly which in turn is programmed to translate OSC to the respective chords in MIDI format. This then can be hooked up to any MIDI sound module (VST is used in this case) to trigger samples.</p>
+
+            <p>
+                <div>"Kadhal Oviyam"</div>
+                <div>Composed by maestro Ilayaraja</div>
+            </p>
+
+            <p>
+                <div>Performed by</div>
+                <div>Sa Rangappriya - violin</div>
+                <div>Sa Rangappriya - violin</div>
+                <div>Raghavasimhan Sa - bass</div>
+                <div>"Chutti" - The Robot - iPad</div>
+            </p></>
     },
     {
         title: "Digital Theremin",
         year: 2017,
         image: "/images/projects/theremin.jpeg",
-        description: <><p>Description goes here</p></>
+        category: "project",
+        youtubeID: "7AyxNu-CI7s",
+        description: <><p>This one has a couple of new stuffs!
+            It’s the world’s first theremin with which, an editable recording can be done! That is, like any other MIDI instrument, the performance can be edited and tweaked!</p>
+
+            <p>It uses 2 Ultrasonic sensors. One for the pitch and the other for the expression.</p>
+
+            <p>The VST and the interface is made using Max MSP. It includes a Synthesizer engine which emulates a tone of a conventional theremin.</p>
+
+            <p>The expression in my theremin is reversed. In a conventional theremin, the loudness increases as you move away from the volume-antenna. But here, it reduces. Thus you don’t have to keep holding the instrument when not playing.</p></>
     },
-    {
-        title: "Home Automation with Raspberry Pi",
-        year: 2017,
-        image: "/images/projects/homekit.webp",
-        description: <><p>Description goes here</p></>
-    },
+    // {
+    //     title: "Home Automation with Raspberry Pi",
+    //     year: 2017,
+    //     image: "/images/projects/homekit.webp",
+    //     category: "project",
+    //     youtubeID: "7KWv5gIq-8o",
+    //     description: <><p>Description goes here</p></>
+    // },
     {
         title: "Xpression Controller for GR55",
         year: 2017,
         image: "/images/projects/gr55.jpeg",
-        description: <><p>Description goes here</p></>
+        category: "project",
+        youtubeID: "p0Jsh0odscA",
+        description: <><p>This is the prototype demo of the Xpression Controller hardware that I made for the Roland GR55. It captures the envelope of the tone (energy of the signal which is proportional to bowing) and controls the attack, amplitude of the sustain and release accordingly.</p>
+
+            <p>It also minimises the false triggering of PCM tones due to the impulse nature of the response produced by it's source.</p>
+
+            <p>The next step would be acquiring data from each string separately and controlling the parameters independently!</p>
+
+            <p>I am also building the filter buffer (linked below) and planning to put it all together as one ultimate "must have" accessory for GR55 especially for Violinists!</p></>
     },
     // {
     //     title: "Light Bow",
@@ -51,6 +104,8 @@ export const projects = [
         title: "Blocks World Redox",
         year: 2014,
         image: "/images/projects/redox.jpeg",
+        category: "research",
+        youtubeID: "3uWGQqhEWCU",
         description: <><p>Description goes here</p></>
     },
 ]

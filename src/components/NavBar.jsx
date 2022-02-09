@@ -192,10 +192,12 @@ export default function NavBar({ lastLoc }) {
                             <span className="full-text"><FaDownload /> Download CV</span>
                             <span className="short-text"><FaDownload /> CV</span>
                         </button></a>
-                        <FaLinkedin className="media-items" />
-                        <FaEnvelope className="media-items" />
-                        <FaGlobeAsia className="media-items" />
-                        <FaGithub className="media-items" />
+                        <a target="_blank" href="https://linkedin.com/in/aavu"><FaLinkedin className="media-items" /></a>
+                        <a target="_blank" href="mailto:aavu@techitunes.com"><FaEnvelope className="media-items" /></a>
+                        <a target="_blank" href="https://github.com/aavu"><FaGithub className="media-items" /></a>
+
+
+
                     </div>
                 </motion.div>
                 <div className="divider"></div>

@@ -134,10 +134,9 @@ export const MobileMenu = ({ pages, addNoHoverFn, setPageCallback }) => {
                 {/* Footer */}
                 <motion.div className='footer'>
                     <div className="media">
-                        <FaLinkedin className="media-items" />
-                        <FaEnvelope className="media-items" />
-                        <FaGlobeAsia className="media-items" />
-                        <FaGithub className="media-items" />
+                        <a target="_blank" href="https://linkedin.com/in/aavu"><FaLinkedin className="media-items" /></a>
+                        <a target="_blank" href="mailto:aavu@techitunes.com"><FaEnvelope className="media-items" /></a>
+                        <a target="_blank" href="https://github.com/aavu"><FaGithub className="media-items" /></a>
                     </div>
                     <a target="_blank" href="/Aavu_CV.pdf"><button>
                         <span className="full-text"><FaDownload /> Download CV</span>

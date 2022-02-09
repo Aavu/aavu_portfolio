@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { MdClose, MdMenu } from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaGithub, FaFacebook, FaTwitter, FaInstagram, FaEnvelope, FaLinkedin, FaGlobeAsia, FaDownload } from 'react-icons/fa'
+import { FaGithub, FaFacebook, FaTwitter, FaInstagram, FaEnvelope, FaLinkedin, FaDownload } from 'react-icons/fa'
 // import cvPdf from '../assets/Aavu_CV.pdf'
 import { saveAs } from "file-saver";
 
@@ -137,6 +137,8 @@ export const MobileMenu = ({ pages, addNoHoverFn, setPageCallback }) => {
                         <a target="_blank" href="https://linkedin.com/in/aavu"><FaLinkedin className="media-items" /></a>
                         <a target="_blank" href="mailto:aavu@techitunes.com"><FaEnvelope className="media-items" /></a>
                         <a target="_blank" href="https://github.com/aavu"><FaGithub className="media-items" /></a>
+                        <a target="_blank" href="https://www.facebook.com/aavusimma"><FaFacebook className="media-items" /></a>
+                        <a target="_blank" href="https://www.instagram.com/violinsimma"><FaInstagram className="media-items" /></a>
                     </div>
                     <a target="_blank" href="/Aavu_CV.pdf"><button>
                         <span className="full-text"><FaDownload /> Download CV</span>

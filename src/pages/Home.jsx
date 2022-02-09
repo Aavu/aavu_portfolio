@@ -11,6 +11,12 @@ const HomeStyle = styled.div`
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        flex-direction: row;
+
+        @media only screen and (max-width: 820px) {
+            flex-direction: column-reverse;
+            justify-content: flex-start;
+        }
 
         .bg {
             width: 500px;
@@ -18,13 +24,25 @@ const HomeStyle = styled.div`
             background-color: var(--black);
             border-radius: 50%;
             overflow: clip;
+
+            @media only screen and (max-width: 820px) {
+                margin: 64px;
+            }
+
+            @media only screen and (max-width: 540px) {
+                width: 300px;
+                height: 300px;
+            }
+
+            @media only screen and (max-width: 300px) {
+                width: 240px;
+                height: 240px;
+            }
         }
 
         img {
             width: 100%;
             height: 100%;
-            /* left: 50px;
-            top: -40px; */
             filter: contrast(1.2) brightness(1.2);
         }
 
@@ -38,6 +56,24 @@ const HomeStyle = styled.div`
             font-weight: 100;
             font-size: 36pt;
             margin:0;
+        }
+
+        @media only screen and (max-width: 540px) {
+            h1 {
+                font-size: 24pt;
+            }
+            h2 {
+                font-size: 24pt;
+            }
+        }
+
+        @media only screen and (max-width: 280px) {
+            h1 {
+                font-size: 20pt;
+            }
+            h2 {
+                font-size: 20pt;
+            }
         }
 
         .name {

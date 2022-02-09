@@ -172,8 +172,8 @@ export default function NavBar({ lastLoc }) {
             >
                 <motion.div className="navbar-holder">
                     <motion.div className="name"
-                        initial={{ x: (lastLoc === '/') ? -400 : 0 }}
-                        animate={{ x: (page === '/') ? -400 : 0 }}
+                        initial={{ x: (lastLoc === '/') ? -500 : 0 }}
+                        animate={{ x: (page === '/') ? -500 : 0 }}
                         transition={{ delay: 0.1, duration: 0.5 }}
                     >
                         <NavLink to="/" className="nav-link name" onClick={() => setPage('/')}>

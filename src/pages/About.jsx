@@ -102,6 +102,10 @@ const AboutMeStyle = styled.div`
             @media only screen and (max-width: 1000px) {
                 margin: 2rem 5rem auto 5rem;
             }
+
+            @media only screen and (max-width: 512px) {
+                margin: 2rem 2rem auto 2rem;
+            }
         }
     }
 `;

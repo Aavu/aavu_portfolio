@@ -56,7 +56,7 @@ const MenuStyles = styled.div`
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 96px;
+        height: 64px;
         padding: 0;
         margin: 0;
         background-color: rgba(200, 200, 200, 0.25);
@@ -87,7 +87,21 @@ const MenuStyles = styled.div`
             display: flex;
             justify-content: space-evenly;
             align-items: center;
-            margin: 32px;
+            margin: 16px;
+            font-size: 16pt;
+        }
+
+        .short-text {
+            display: none;
+        }
+
+        .full-text {
+            display: inline-block;
+        }
+
+        @media (max-width: 512px) {
+            .short-text { display: inline-block;}
+            .full-text {display: none;}
         }
     }
 
@@ -126,7 +140,8 @@ export const MobileMenu = ({ pages, addNoHoverFn, setPageCallback }) => {
                         <FaGithub className="media-items" />
                     </div>
                     <a target="_blank" href="/Aavu_CV.pdf"><button>
-                        <FaDownload /> Download CV
+                        <span className="full-text"><FaDownload /> Download CV</span>
+                        <span className="short-text"><FaDownload /> CV</span>
                     </button></a>
                     {/* <button onClick={savePdf}>
                         <FaDownload /> Download CV

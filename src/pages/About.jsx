@@ -11,7 +11,7 @@ function importAll(r) {
 const AboutImages = importAll(require.context('../assets/data/about', false, /\.(png|jpe?g|)$/));
 
 const AboutMeStyle = styled.div`
-    height: calc(max(100vh, 100%) - 50px);
+    /* height: calc(max(100vh, 100%) - 50px); */
     h1 {
         width: 100%;
         text-align: center;
@@ -31,11 +31,20 @@ const AboutMeStyle = styled.div`
         }
 
         .text-container {
-            margin: 2rem 6rem 5rem 4rem;
+            margin: 2rem 5rem 5rem 2rem;
+
             p {
                 text-align: justify;
                 padding: 8px;
                 line-height: 2;
+            }
+
+            @media only screen and (max-width: 1000px) {
+                margin: 2rem 5rem 5rem 5rem;
+            }
+
+            @media only screen and (max-width: 512px) {
+                margin: 2rem 2rem 5rem 2rem;
             }
         }
 
@@ -94,17 +103,6 @@ const AboutMeStyle = styled.div`
                 &:hover {
                     transform: scale(1.02);
                 }
-            }
-        }
-        .text-container {
-            margin: 2rem 5rem auto 2rem;
-
-            @media only screen and (max-width: 1000px) {
-                margin: 2rem 5rem auto 5rem;
-            }
-
-            @media only screen and (max-width: 512px) {
-                margin: 2rem 2rem auto 2rem;
             }
         }
     }
@@ -179,7 +177,8 @@ export default function About() {
                         <p>I have participated in numerous music competitions and has bagged winning prizes since childhood. I am an All India Radio (AIR) "B high" artist. AIR has over 20 million listeners across India.</p>
                         <p>I am also a session musician, who has recorded for prominent composers. I have featured in more than 200 feature films and albums. I have been collaborating with various artists, bands and orchestras in India and across the world. I have also composed, arranged, produced, programmed and mixed for various independent and commercial productions.</p>
                         <p>Apart from the Carnatic classical genre, I play the Western classical, Jazz, Melo-rock, Country, Blues, Irish, Arabic/Persian, Hindustani. I have the thirst to try and experiment different styles and genres. Being an electronics engineer, I have incorporated techniques; created my own versatility and uniqueness in both playing and the tones. These made my music unique and top the charts.</p>
-                        <p>I am active self-learner and love collecting instruments. This enables me to learn and play a lot of rare instruments such as the Duduk, Musical Saw, dan K’ni. I have been modifying and creating new instruments as well. I am the first to use a Talk-box in Indian Classical music to make the violin sing with lyrics!</p>
+                        <p>I am active self-learner and love collecting instruments. This enables me to learn and play a lot of rare instruments such as the Duduk, Musical Saw, dan K’ni. I have been modifying and creating new instruments as well. I am the first to use a Talk-box in Indian Classical music to make the violin sing with lyrics! <br />
+                        </p>
                     </div>
                 </div>
             </AboutMeStyle>

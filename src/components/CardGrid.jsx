@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from "framer-motion"
 import { Cards } from './Cards';
+import { MdClose } from 'react-icons/md';
 
 const CardGridStyle = styled.div`
     position: relative;
@@ -19,6 +20,15 @@ const CardGridStyle = styled.div`
         z-index: 10;
         overflow: auto;
         max-height: 80%;
+
+        .close-icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin: 1rem;
+            font-size: 24pt;
+            cursor: pointer;
+        }
     }
 
     .dim-layer {
@@ -41,8 +51,9 @@ const CardGridStyle = styled.div`
     }
 
     iframe {
-        width: 80%;
-        height: 40vh;
+        width: calc(100% - 1rem);
+        /* padding-left: 1rem; */
+        /* padding-right: 1rem; */
         display: block;
         margin: auto;
     }
@@ -52,12 +63,19 @@ const CardGridStyle = styled.div`
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        margin-top: 0;
+
+        .title {
+            font-size: 20pt;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
 
         .text {
             text-align: justify;
             text-justify: inter-word;
             line-height: 2;
-            padding: 0 48px 48px 48px;
+            padding: 0 1rem 1rem 1rem;
         }
     }
 `;
@@ -109,6 +127,7 @@ const CardGrid = ({ items, headings, lastLoc, location }) => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                     >
+                        <MdClose className='close-icon' onClick={() => setSelectedId(null)} />
                         <motion.p className='desc'>
                             <h1 className="title">
                                 {items[selectedId].title}

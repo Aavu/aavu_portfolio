@@ -23,7 +23,7 @@ const HomeStyle = styled.div`
             height:500px;
             background-color: var(--black);
             border-radius: 50%;
-            overflow: clip;
+            overflow: hidden;
 
             @media only screen and (max-width: 820px) {
                 margin: 64px;

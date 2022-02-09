@@ -131,6 +131,9 @@ export const projects = [
         image: "/images/projects/redox.jpeg",
         category: "research",
         youtubeID: "3uWGQqhEWCU",
-        description: <><p>Description goes here</p></>
+        description: <><p>
+            During my undergrad study in the year 2014 at MIT, I was working on this project with Professor Larry Sass and Dr. Daniel Smithwick. <br />
+            Our goal was to make the robot compliment human creativity. The robot will not just do what it is programmed for, but analyze the scenario and respond to it accordingly. This is in basic sense called as “creativity”. In the initial stages, we were aiming towards it solving simple scenarios such as mirroring, replicating, and arranging the blocks, detecting the right ones for that place, etc. The robot accomplishes tasks such as copying, mirroring, rotating the set of 2D shapes with respect to its shape and position in the 2D axis. It will pick up the right shape distinguished by its distinct colors and shapes from the pile and place it in the right place in the 2D axis with respect to the original (reference) arrangement provided.<br />
+            My part of the project was to design a rule based system that analyses the scene and detect boundaries, reference line, position and shapes of objects in 2d space, which would be input to the robot to move it to that point with the help of reverse kinematics.</p></>
     },
 ]
